@@ -1,8 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { 
   font-family: 'Poppins', sans-serif;
   background-color: #f0f2f5; 
   color: #333;
+} */
+
+@import "tailwindcss";
+
+@theme {
+  --animate-marquee: marquee 25s linear infinite;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: black; /* මේකෙන් මුළු පිටුවම කළු වෙයි */
+  color: white;
 }
