@@ -8,7 +8,7 @@ const Footer = () => {
   // --- ඔයාගේ Social Links මෙතන update කරන්න ---
   const socialLinks = {
     github: "https://github.com/nithushi", // ඔයාගේ GitHub Profile Link එක
-    linkedin: "https://linkedin.com/in/nithushi", // ඔයාගේ LinkedIn Profile Link එක
+    linkedin: "https://www.linkedin.com/in/nithushi-shavindi-aa5729281/", // ඔයාගේ LinkedIn Profile Link එක
     twitter: "#", // තියෙනවා නම් දාන්න, නැත්නම් '#' තියන්න
   };
   // ----------------------------------------------

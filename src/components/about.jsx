@@ -8,7 +8,7 @@ const About = () => {
     const socialLinks = {
         email: "mailto:nithushishavindi0@gmail.com",
         github: "https://github.com/nithushi",
-        linkedin: "https://linkedin.com/in/nithushi",
+        linkedin: "https://www.linkedin.com/in/nithushi-shavindi-aa5729281/",
     };
 
     return (
