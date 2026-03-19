@@ -4,137 +4,151 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: "DocPensa Admin Panel",
+    desc: "Comprehensive admin dashboard for managing healthcare documents and user roles.",
+    image: "/projects/docpensa-admin.png",
+    tags: ["Next.js", "Spring Boot", "PostgreSQL"],
+    github: "https://github.com/nithushi/DocPensa-Admin",
+    role: "Lead Developer",
+    status: "Ongoing" // Green label එක වැටෙන්න මේක දාන්න
+  },
+  {
     title: "Personal Finance Tracker",
     desc: "A smart web app to manage daily expenses and visualize financial health with charts.",
-    tags: ["Flutter", "Dart", "PostgreSQL"],
+    image: "/projects/finance-tracker.png",
+    tags: ["React", "Go", "PostgreSQL"],
     github: "https://github.com/nithushi/Finance-Tracker",
-    color: "bg-emerald-500",
-    large: true // Highlight this new project
+    demo: "#",
+    role: "Lead Developer"
   },
   {
     title: "Mobile Food Ordering App",
     desc: "Android-native app with Java & Firebase. Real-time order tracking.",
+    image: "/projects/food-app.jpeg",
     tags: ["Android", "Java", "Firebase"],
     github: "https://github.com/nithushi/SavoryHub-Mobile-Application",
-    color: "bg-orange-500"
-  },
-  {
-    title: "Docpensa Admin Panel",
-    desc: "Comprehensive admin dashboard for managing healthcare documents and user roles.",
-    tags: ["Next.js", "Go", "PostgreSQL"],
-    github: "https://github.com/nithushi/DocPensa-Admin",
-    color: "bg-red-600",
-    large: false
+    role: "Mobile App Developer"
   },
   {
     title: "E-Commerce Web App",
     desc: "Scalable shopping platform with Next.js & Spring Boot backend.",
+    image: "/projects/ecommerce.png",
     tags: ["Next.js", "Spring Boot", "MySQL"],
     github: "https://github.com/nithushi/quick-cart-frontend",
-    color: "bg-blue-600",
-    large: true
+    role: "Full Stack Engineer"
   },
   {
     title: "Healthcare Management",
     desc: "JavaFX desktop app using OODP concepts for patient records.",
+    image: "/projects/hms1.png",
     tags: ["JavaFX", "Java", "MySQL"],
     github: "https://github.com/nithushi/GlobeMed-HMS",
-    color: "bg-cyan-500"
+    role: "Desktop App Developer"
   },
   {
     title: "Content Sharing Platform",
     desc: "Social blogging platform with Angular 19 & PostgreSQL.",
+    image: "/projects/content-hub.png",
     tags: ["Angular", "Spring Boot", "PostgreSQL"],
     github: "https://github.com/nithushi/content-hub-frontend",
-    color: "bg-rose-500",
-    large: true
-  },
-  {
-    title: "Secure Notebook",
-    desc: "Android note-taking app with MySQL backend integration.",
-    tags: ["Android", "Java", "MySQL"],
-    github: "https://github.com/nithushi/Notebook",
-    color: "bg-purple-500"
-  },
-  {
-    title: "Real-time Chat App",
-    desc: "Full-stack chat solution with React and Java.",
-    tags: ["React", "Java", "MySQL"],
-    github: "https://github.com/nithushi/student-system",
-    color: "bg-indigo-500"
+    role: "Full Stack Engineer"
   }
 ];
 
 const ProjectsBento = () => {
   return (
-    <div id="projects" className="bg-black text-white py-24 px-6">
+    <section id="projects" className="py-20 bg-black text-white px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold mb-4"
           >
             Featured Work
           </motion.h2>
-          <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
+          <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </div>
-        
-        {/* Grid Layout - 3 columns on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
+
+        {/* Uniform Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className={`relative group overflow-hidden rounded-[2.5rem] p-8 border border-gray-800 bg-[#0a0a0a] hover:border-gray-700 transition-all duration-500 ${
-                project.large ? "md:col-span-2" : "md:col-span-1"
-              }`}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group bg-[#0d0d0d] rounded-[2rem] border border-gray-800/50 overflow-hidden flex flex-col hover:border-blue-500/30 transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]"
             >
-              {/* Animated Background Glow */}
-              <div className={`absolute -top-20 -right-20 w-64 h-64 ${project.color} blur-[100px] opacity-10 group-hover:opacity-30 transition-opacity duration-700`} />
 
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex-1">
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, i) => (
-                      <span key={i} className="text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="text-3xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
+              {/* Project Image Area with Labels */}
+              <div className="relative aspect-video overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+
+                {/* Status Label (Ongoing / Prototype) */}
+                <div className="absolute top-4 right-4 z-20">
+                  {project.status === "Ongoing" ? (
+                    /* Green Background with White Text */
+                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full bg-green-600 border border-green-500 text-white shadow-lg shadow-green-900/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                      Ongoing
+                    </span>
+                  ) : (
+                    /* Orange Background with White Text */
+                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full bg-orange-600 border border-orange-500 text-white shadow-lg shadow-orange-900/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
+                      Prototype
+                    </span>
+                  )}
+                </div>
+
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4 z-10">
+                  <a href={project.github} target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full text-white backdrop-blur-md hover:bg-blue-500 transition-colors">
+                    <FaGithub size={20} />
+                  </a>
+                  {project.demo && project.demo !== "#" && (
+                    <a href={project.demo} target="_blank" rel="noreferrer" className="p-3 bg-white/10 rounded-full text-white backdrop-blur-md hover:bg-blue-500 transition-colors">
+                      <FaExternalLinkAlt size={18} />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {/* Content Area */}
+              <div className="p-7 flex flex-col flex-1">
+                <div className="mb-4">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
                     {project.desc}
                   </p>
                 </div>
 
-                <div className="flex gap-6 mt-6 items-center">
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="flex items-center gap-2 text-sm font-semibold text-gray-400 hover:text-white transition-colors"
-                  >
-                    <FaGithub size={20} /> <span>Source</span>
-                  </a>
-                  <a 
-                    href="#" 
-                    className="flex items-center gap-2 text-sm font-semibold text-gray-400 hover:text-white transition-colors"
-                  >
-                    <FaExternalLinkAlt size={16} /> <span>Demo</span>
-                  </a>
+                <div className="flex flex-wrap gap-2 mt-auto pt-5 border-t border-gray-800/50">
+                  <p className="w-full text-[11px] font-bold uppercase tracking-widest text-blue-500 mb-3 italic">
+                    {project.role}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="text-[10px] uppercase font-bold px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-gray-400">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
