@@ -16,7 +16,7 @@ const projects = [
     title: "Personal Finance Tracker",
     desc: "A smart web app to manage daily expenses and visualize financial health with charts.",
     image: "/projects/finance-tracker.png",
-    tags: ["React", "Go", "PostgreSQL"],
+    tags: ["Flutter", "Go", "PostgreSQL"],
     github: "https://github.com/nithushi/Finance-Tracker",
     demo: "#",
     role: "Lead Developer"
