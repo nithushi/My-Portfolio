@@ -7,7 +7,7 @@ const projects = [
     title: "Docpensa Admin Panel",
     desc: "Comprehensive admin dashboard for managing healthcare documents and user roles.",
     image: "/projects/docpensa-admin.png",
-    tags: ["Next.js", "Spring Boot", "PostgreSQL"],
+    tags: ["Next.js", "Go", "PostgreSQL"],
     github: "https://github.com/nithushi/DocPensa-Admin",
     role: "Lead Developer",
     status: "Ongoing" // Green label එක වැටෙන්න මේක දාන්න
