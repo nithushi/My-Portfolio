@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: "DocPensa Admin Panel",
+    title: "Docpensa Admin Panel",
     desc: "Comprehensive admin dashboard for managing healthcare documents and user roles.",
     image: "/projects/docpensa-admin.png",
     tags: ["Next.js", "Spring Boot", "PostgreSQL"],
