@@ -92,6 +92,22 @@ const ProjectsBento = () => {
                 />
 
                 {/* Status Label (Ongoing / Prototype) */}
+                {/* <div className="absolute top-4 right-4 z-20">
+                  {project.status === "Ongoing" ? (
+                  
+                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full bg-green-600 border border-green-500 text-white shadow-lg shadow-green-900/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                      Ongoing
+                    </span>
+                  ) : (
+                    
+                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full bg-orange-600 border border-orange-500 text-white shadow-lg shadow-orange-900/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
+                      Prototype
+                    </span>
+                  )}
+                </div> */}
+
                 <div className="absolute top-4 right-4 z-20">
                   {project.status === "Ongoing" ? (
                     /* Green Background with White Text */
@@ -100,11 +116,13 @@ const ProjectsBento = () => {
                       Ongoing
                     </span>
                   ) : (
-                    /* Orange Background with White Text */
-                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full bg-orange-600 border border-orange-500 text-white shadow-lg shadow-orange-900/20">
+                    /* Prototype කොටස මෙතනින් comment කළා */
+                    /* <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full bg-orange-600 border border-orange-500 text-white shadow-lg shadow-orange-900/20">
                       <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
                       Prototype
-                    </span>
+                    </span> 
+                    */
+                    null // Prototype එක පේන්න ඕනේ නැති නිසා මෙතනට null දුන්නා
                   )}
                 </div>
 

@@ -7,9 +7,10 @@ import Hero from './components/Hero';
 import Experience from './components/Experience';
 import TechStack from './components/TechStack';
 import ProjectsBento from './components/ProjectsBento';
+import About from './components/about';
 
 // --- අලුත් Components ---
-import Contact from './components/Contact'; 
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 // --- App Component ---
@@ -18,9 +19,12 @@ function App() {
     <div className="bg-black min-h-screen text-white">
       <Navbar />
       <Hero />
-      
-      {/* IDs එකතු කළා Navbar links වැඩ කරන්න */}
+
       <section id="about">
+        <About />
+      </section>
+
+      <section id="technologies">
         <TechStack />
       </section>
 
@@ -31,7 +35,7 @@ function App() {
       <section id="projects">
         <ProjectsBento />
       </section>
-      
+
       {/* Contact Section */}
       <Contact />
 

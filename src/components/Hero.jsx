@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section id="home" className="relative mt-24 py-24 flex items-center justify-center overflow-hidden bg-black">
       {/* Background Ambient Light */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600 blur-[120px] opacity-30 animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-600 blur-[120px] opacity-30 animate-pulse" />
